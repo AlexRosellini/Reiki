@@ -118,7 +118,7 @@ p {
 
   /* Further adjustments to ensure content fits without causing overflow */
   button, p, .content {
-    margin: 0 5px; /* Add slight margin to prevent edge-to-edge text/button */
+    margin: 0 0px; /* Add slight margin to prevent edge-to-edge text/button */
     font-size: 14px; /* Adjust font size for readability */
   }
 }
