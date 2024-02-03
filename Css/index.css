@@ -8,7 +8,7 @@
   --button-hover-bg-color: #008000;
   --button-active-bg-color: #008000;
   --text-color: #232c3d;
-  --border-color: #025e09;
+  --border-color: #295638;
 }
 
 body {
@@ -23,6 +23,7 @@ body {
 h1 {
   font-size: 48px;
   color: var(--border-color); /* Use variable for color */
+  font-family: "Dancing Script", cursive;
 }
 
 .wrapper {
@@ -55,6 +56,26 @@ button {
   transition: background-color 0.5s; /* Specify property to transition */
 }
 
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: #008000;
+}
+
+/* mouse over link */
+a:hover {
+  color: #004000;
+}
+
+/* selected link */
+a {
+  color: blue;
+}
+
 button:hover {
   background-color: var(--button-hover-bg-color);
 }
@@ -68,7 +89,6 @@ button.active {
 }
 
 p {
-  display: flex;
   padding: 10px;
 }
 
@@ -90,6 +110,11 @@ p {
   width: 350px; /* Adjusted width to match the HTML example */
 }
 
+.beatrice-desc {
+  text-align : center;
+}
+
+
 /* Base styles */
 
 @media (max-width: 768px) {
@@ -103,6 +128,10 @@ p {
     width: 100%; /* Make images responsive */
     max-width: 100%; /* Prevent them from becoming too large */
     height: auto; /* Maintain aspect ratio */
+  }
+
+  h1 {
+    color: lime;
   }
 
   .beatrice {
@@ -125,6 +154,10 @@ p {
 
 .content {
   padding: 10px 5px; /* Adjust content padding */
+}
+
+span {
+  font-weight: bold;
 }
 
 /* Ensure no element overflows the screen width */
