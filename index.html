@@ -1,31 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Beatrice Raiki</title>
-    <!-- Corrected the path for CSS relative to the location of index.html -->
-    <link rel="stylesheet" href="Css/index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Rubik:wght@300;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/747f9e06bc.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <meta name="description" content="Discover the healing power of Reiki with Béatrice, a master Reiki practitioner. Explore services, sessions, and the philosophy behind Reiki.">
+            <title>Beatrice Raiki - Master Reiki Practitioner</title>
+            <link rel="stylesheet" href="Css/index.css">
+            <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Rubik:wght@300;700&display=swap" rel="stylesheet">
+            <script src="https://kit.fontawesome.com/747f9e06bc.js" crossorigin="anonymous"></script>
+        </head>
+        <body>
     <!-- Title and Image Section -->
-    <div class="title">    
-        <h1>Béatrice maître Reiki</h1>
-        <!-- Corrected the path for images relative to the location of index.html -->
-        <img src="Pictures/Logo.jpg" alt="picture Reiki">
-    </div>
-
-    <!-- Navigation Buttons -->
-    <div class="wrapper">
-        <div class="buttonWrapper">
-            <button class="tab-button active" style="border-top-left-radius: 10px;" data-id="home">Le Reiki C'est quoi?</button>
-            <button class="tab-button" data-id="about">Rencontrez Béatrice</button>
-            <button class="tab-button" style="border-top-right-radius: 10px;" data-id="contact">Soins proposés</button>
+    <header>
+        <div class="title">    
+            <h1>Béatrice Maître Reiki</h1>
+            <img src="Pictures/Logo.jpg" alt="Reiki Practice Logo">
         </div>
-
+    </header>
+    <!-- Navigation Buttons -->
+    <nav>
+        <main>
+        <div class="wrapper">
+            <div class="buttonWrapper">
+                <button class="tab-button active" data-id="home">Le Reiki C'est quoi?</button>
+                <button class="tab-button" data-id="about">Rencontrez Béatrice</button>
+                <button class="tab-button" data-id="contact">Soins proposés</button>
+                <button class="tab-button" data-id="Gallerie">Béatrice en action</button>
+            </div>
+        </div>
+    </nav>
         <!-- Content Sections -->
         <div class="contentWrapper">
             <p class="content active" id="home">
@@ -63,7 +68,7 @@
 				
             </p>
             <div class="content" id="about">
-                <img src="Pictures/Béatrice.jpg" alt="Béatrice" class="Beatrice" style="width: 350px">
+                <img src="Pictures/Béatrice.jpg" alt="Béatrice" class="beatrice">
                 <p>"j ai découvert par hasard le REIKI dans un moment difficile de ma vie, cela a changé  ma manière de voir les choses. J'ai envie de faire partager cette philosophie de vie qui ouvre de nouvelles perspectives et tend vers le bonheur et suis 
                     entrainée dans la variante japonaise du Reiki. Prenez contact avec moi sur la page soins proposés! Je suis basée dans le 13." <p class="beatrice-desc">- Béatrice Rosellini</p></p>
             </div>
@@ -81,8 +86,16 @@
                 Par Numéro de Téléphone : <span>0665135992</span>
                 <br> <br>
                 Note: Béatrice est basée sur Saint paule les durances dans le 13
-
             </p>
+            <div class="content" id="Gallerie">
+                <span>Voici quelques images de Béatrice en action sur soins long et court :</span>
+                <div class="gallery">
+                    <img src="Pictures/Reiki1.jpg" alt="Reiki 1" class="gallery-image">
+                    <img src="Pictures/Reiki2.jpg" alt="Reiki 2" class="gallery-image">
+                    <img src="Pictures/Reiki3.jpg" alt="Reiki 3" class="gallery-image">
+                    <img src="Pictures/Reiki4.jpg" alt="Reiki 4" class="gallery-image">
+                </div>
+            </div>
         </div>
     </div>
 

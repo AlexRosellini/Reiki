@@ -1,6 +1,14 @@
 /* Importing font at the beginning */
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;700&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
 :root {
   /* Define CSS variables for color scheme */
   --primary-bg-color: #f0f5ff;
@@ -26,6 +34,13 @@ h1 {
   font-family: "Dancing Script", cursive;
 }
 
+.contentWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .wrapper {
   width: 80%;
   margin: auto;
@@ -42,16 +57,17 @@ img {
 
 .buttonWrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Simplified */
+  grid-template-columns: repeat(4, 1fr); /* Simplified */
+
 }
 
 button {
   letter-spacing: 3px;
   border: none;
-  padding: 10px;
   background-color: var(--button-bg-color);
   color: var(--text-color);
-  font-size: 18px;
+  padding: 8px 10px; /* Slightly reduce padding */
+  font-size: 16px; /* Adjust font size if necessary */
   cursor: pointer;
   transition: background-color 0.5s; /* Specify property to transition */
 }
@@ -97,8 +113,71 @@ p {
   padding: 5px;
 }
 
+span {
+  font-weight : bold
+}
+
 .content.active {
   display: block;
+}
+
+.buttonWrapper button:last-child {
+  border-top-right-radius: 10px; /* Remove the curved border for the last tab on smaller screens */
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: transparent; /* Ensure the wrapper has a transparent background */
+}
+
+
+#Gallerie {
+  width: 90%; /* Make the gallery take up 90% of the content wrapper */
+  margin: auto; /* Center the gallery within the contentWrapper */
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.gallery-image {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Adjust the aspect ratio according to your preference */
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr; /* Stack images in a single column on smaller screens */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr; /* Stack images in a single column on smaller screens */
+  }
+}
+
+.beatrice {
+    max-width: 100%; /* Ensure the image is never wider than its container */
+    height: 800px; /* Maintain the aspect ratio of the image */ /* Adjusted width to match the HTML example */
+}
+
+.beatrice-desc {
+  text-align : center;
+}
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr; /* Stack images vertically */
+  }
 }
 
 /* It seems there was an attempt to redefine styles inside a nested scope which is not valid in CSS.
@@ -106,62 +185,52 @@ p {
 */
 
 /* Additional styles for the Beatrice image if needed */
-.beatrice {
-  width: 350px; /* Adjusted width to match the HTML example */
-}
 
-.beatrice-desc {
-  text-align : center;
-}
 
 
 /* Base styles */
 
 @media (max-width: 768px) {
   .wrapper {
-    width: 90%; /* Adjust width for smaller screens */
-    margin: 20px auto; /* Ensure it's centered with some margin */
-    padding: 20px; /* Adjust padding */
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
   }
 
-  img {
-    width: 100%; /* Make images responsive */
-    max-width: 100%; /* Prevent them from becoming too large */
-    height: auto; /* Maintain aspect ratio */
+  .buttonWrapper {
+    grid-template-columns: repeat(2, 1fr); /* Adjust for medium screens */
   }
 
-  h1 {
-    color: lime;
+  .buttonWrapper button:last-child {
+    border-top-right-radius: 0; /* Remove the curved border for the last tab on smaller screens */
   }
 
   .beatrice {
-    max-width: 100%; /* Adjust Beatrice image size for small devices */
+    max-width: 100%; /* Adjust Beatrice image size for smaller devices */
+    height: auto;
   }
+
+  /* Adjust button, paragraph, and content styles as necessary */
 }
 
 @media (max-width: 480px) {
   .wrapper {
-    width: 95%; /* Increase width to use more screen space */
-    padding: 15px; /* Slightly reduce padding */
+    width: 95%;
+    padding: 15px;
   }
 
-  /* Further adjustments to ensure content fits without causing overflow */
+  .buttonWrapper {
+    grid-template-columns: 1fr; /* Stack buttons vertically on smallest screens */
+  }
+
   button, p, .content {
-    margin: 0 0px; /* Add slight margin to prevent edge-to-edge text/button */
-    font-size: 14px; /* Adjust font size for readability */
+    font-size: 12px; /* Further adjust font size for readability on small devices */
+    padding: 6px; /* Adjust padding */
   }
-}
 
-.content {
-  padding: 10px 5px; /* Adjust content padding */
-}
-
-span {
-  font-weight: bold;
-}
-
-/* Ensure no element overflows the screen width */
-* {
-  box-sizing: border-box; /* Make sure padding and borders are included in the total width and height */
-}
+  /* Ensure all images, including Beatrice, are fully responsive */
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
