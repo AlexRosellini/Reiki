@@ -56,9 +56,10 @@ img {
 }
 
 .buttonWrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Simplified */
-
+  display: flex; /* Use flexbox instead of grid */
+  flex-wrap: nowrap; /* Prevent wrapping of items */
+  justify-content: center; /* Center the buttons in the wrapper */
+  align-items: stretch; /* Stretch the items to fill the container */
 }
 
 button {
