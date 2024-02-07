@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;300;400;700&display=swap');
 
 * {
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -24,7 +23,7 @@ body {
   font-family: 'Jost', sans-serif;
   background: url("../Pictures/Reiki.jpg") no-repeat center center/cover; /* Adjust path as necessary */
   min-height: 100vh; /* Ensure it covers at least the viewport height */
-  margin: 0; /* Remove default margin to prevent horizontal scrolling */
+  margin: 5; /* Remove default margin to prevent horizontal scrolling */
   overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
@@ -47,7 +46,7 @@ h1 {
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, .1);
   padding: 20px;
-  margin-bottom: 5px
+  margin-bottom: 25px
   background-color: white; /* Set background color for consistency */
 }
 
@@ -111,7 +110,6 @@ p {
 
 .content {
   display: none;
-  padding: 5px;
 }
 
 span {
@@ -120,12 +118,16 @@ span {
 
 .content.active {
   display: block;
+  margin-bottom:
 }
 
 .buttonWrapper button:last-child {
   border-top-right-radius: 10px; /* Remove the curved border for the last tab on smaller screens */
 }
 
+.buttonWrapper button:first-child {
+  border-top-left-radius: 10px; /* Remove the curved border for the last tab on smaller screens */
+}
 .contentWrapper {
   display: flex;
   justify-content: center;
